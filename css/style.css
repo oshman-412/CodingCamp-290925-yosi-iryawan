@@ -1,0 +1,142 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Latar belakang gelap seperti referensi */
+    color: #d4e5d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+    /* --- Latar Belakang Gambar Perpustakaan --- */
+    background-image: url('https://images7.alphacoders.com/104/1042582.jpg'); 
+    background-size: cover; /* Pastikan gambar menutupi seluruh layar */
+    background-attachment: fixed; /* Membuat gambar tetap saat konten di-scroll */
+    background-position: center; /* Memastikan gambar terpusat */
+
+    /* Tambahkan Overlay Gelap agar konten di atasnya mudah dibaca */
+    position: relative;
+    z-index: 1; /* Agar konten berada di atas overlay */
+}
+
+.container {
+    background-color: #253e2b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 600px;
+    z-index: 2; /* Agar konten berada di atas overlay */
+}
+
+h1 {
+    text-align: center;
+    color: #6bc071;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Styling Form Input */
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input, #date-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: #354738;
+    color: white;
+}
+
+.add-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #92d183;
+    color: #282c36;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #21a1f1;
+}
+
+/* Styling Controls (Filter/Delete All) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#filter-btn, #delete-all-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+#filter-btn {
+    background-color: #608365;
+    color: rgb(228, 237, 225);
+}
+
+#delete-all-btn {
+    background-color: #b34542;
+    color: white;
+}
+
+/* Styling Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #4a684f;
+}
+
+th {
+    background-color: #354738;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #92d183;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    color: #ff150c;
+}
+
+.status-done {
+    color: #5cb85c; /* Hijau untuk status selesai */
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #e8a75e; /* Kuning/Oranye untuk status tertunda */
+}
+
+.no-task-found {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #a8d1a1;
+}

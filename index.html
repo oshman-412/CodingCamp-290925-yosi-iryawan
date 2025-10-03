@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Peminjaman Loker Perpustakaan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>To Do list - Pencatatan Peminjaman Loker</h1>
+        
+        <form id="loker-form">
+            <input type="text" id="loker-nomor" placeholder="Nomor Loker (cth: A01)" required>
+            <input type="text" id="peminjam-nama" placeholder="Nama Peminjam" required>
+            <input type="date" id="tanggal-kembali" required>
+            <button type="submit" class="add-btn">+</button>
+        </form>
+
+        <div class="controls">
+            <button id="filter-btn">FILTER (Status)</button>
+            <button id="delete-all-btn">HAPUS SEMUA DATA</button>
+        </div>
+
+        <div class="task-list-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOMOR LOKER</th>
+                        <th>NAMA PEMINJAM</th>
+                        <th>TGL PEMINJAMAN</th>
+                        <th>STATUS</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody id="loker-list">
+                    <tr><td colspan="5" class="no-task-found">Belum ada data peminjaman.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
